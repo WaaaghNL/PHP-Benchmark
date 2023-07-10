@@ -27,7 +27,7 @@ class BenchMark {
      * Everytime the mark function runs it updates the ['last'] time
      * @param type $name
      */
-    function mark($name) {
+    function mark($name = null) {
         //Create timestamp
         $time = microtime(true);
 
@@ -97,5 +97,4 @@ class BenchMark {
         $dtT = new \DateTime("@$time");
         echo $dtF->diff($dtT)->format('%a days, %h hours, %i minutes and %s seconds');
     }
-
 }
